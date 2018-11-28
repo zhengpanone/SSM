@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zp</groupId>
+    <artifactId>ssm</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <name>ssm-parent</name>
+    <url>http://maven.apache.org</url>
+
+
+    <modules>
+        <module>../ssm-common</module>
+        <module>../ssm-facade-admin</module>
+        <module>../ssm-service-admin</module>
+        <module>../ssm-web-admin</module>
+    </modules>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <!-- start 内部jar -->
+        <!-- 公共和平台的 -->
+        <ssm-parent.version>1.0</ssm-parent.version>
+        <ssm-common.version>1.0</ssm-common.version>
+        <ssm-facade-admin.version>1.0</ssm-facade-admin.version>
+        <ssm-service-admin.version>1.0</ssm-service-admin.version>
+        <ssm-web-admin.version>1.0</ssm-web-admin.version>
+
+        <!-- start 外部jar -->
+        <junit.version>4.12</junit.version>
+        <!-- end 外包jar-->
+    </properties>
+
+
+    <dependencies>
+        <!-- 测试 start -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <!--打包后的项目名，url 前缀-->
+        <finalName>ssm</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <!--设置编译时使用的 JDK 版本-->
+                    <source>1.8</source>
+                    <!--设置运行时使用的 JDK 版本-->
+                    <target>1.8</target>
+                    <!--设置为 true 则跳过测试-->
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
