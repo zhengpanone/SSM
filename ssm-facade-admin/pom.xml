@@ -13,10 +13,10 @@
 
 
     <artifactId>ssm-facade-admin</artifactId>
-    <version>${jzee-facade-admin.version}</version>
+    <version>${ssm-facade-admin.version}</version>
     <packaging>jar</packaging>
 
-    <name>jzee-facade-admin</name>
+    <name>ssm-facade-admin</name>
     <url>http://maven.apache.org</url>
 
     <properties>
