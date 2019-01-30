@@ -34,8 +34,9 @@
 
         <!-- start 外部jar -->
         <junit.version>4.12</junit.version>
-        <mybatis-spring-boot-starter>1.3.1</mybatis-spring-boot-starter>
-        <spring-boot-starter-web>RELEASE</spring-boot-starter-web>
+        <mybatis-spring-boot-starter.version>1.3.1</mybatis-spring-boot-starter.version>
+        <spring-boot-starter-web.version>RELEASE</spring-boot-starter-web.version>
+        <lombok.version>1.16.20</lombok.version>
         <!-- end 外包jar-->
     </properties>
 
@@ -64,6 +65,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot-starter-web.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
 
 
